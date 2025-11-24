@@ -4,7 +4,7 @@ services:
       context: .
       target: runtime
     ports:
-      - 8698:7860
+      - 7860:7860
     networks:
       - atheon-in-action-net
       - atheon-gateway-net
@@ -16,7 +16,7 @@ services:
       MONGO_URI: "${MONGO_URI}"
       OPENBLAS_NUM_THREADS: "${OPENBLAS_NUM_THREADS:-4}"
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://atheon-in-action/health"]
+      test: [ "CMD", "curl", "-f", "http://atheon-in-action/health" ]
       interval: 60s
       timeout: 5s
       retries: 3

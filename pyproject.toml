@@ -1,6 +1,6 @@
 [project]
 name = "atheon-in-action"
-version = "0.0.0"
+version = "0.3.0"
 description = "Huggingface Demo showcasing how Atheon works"
 authors = [{ name = "Saurabh Ghanekar", email = "ghanekarsaurabh8@gmail.com" }]
 license = "BSD-2-Clause"
@@ -12,8 +12,7 @@ dependencies = [
     "uvicorn>=0.34",
     "pydantic>=2.10",
     "pillow>=11.1",
-    "atheon-codex>=0.3",
-    "llama-cpp-python>=0.3",
+    "atheon-codex>=0.5",
     "huggingface-hub>=0.29",
     "pymongo>=4.11",
     "email-validator>=2.2",

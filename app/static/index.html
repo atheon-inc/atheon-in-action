@@ -115,12 +115,6 @@
                         class="hidden absolute z-10 mt-1 w-full bg-white rounded-md border border-gray-300 shadow-lg dark:bg-gray-700 dark:border-gray-600">
                         <ul class="py-1">
                             <li class="px-4 py-2 text-gray-800 cursor-pointer model-option dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600"
-                                data-value="gemma2">
-                                Gemma2
-                            </li>
-                        </ul>
-                        <ul class="py-1">
-                            <li class="px-4 py-2 text-gray-800 cursor-pointer model-option dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600"
                                 data-value="llama3_1">
                                 Llama3.1
                             </li>
@@ -133,20 +127,14 @@
                         </ul>
                         <ul class="py-1">
                             <li class="px-4 py-2 text-gray-800 cursor-pointer model-option dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600"
-                                data-value="qwen2_5">
-                                Qwen2.5
-                            </li>
-                        </ul>
-                        <ul class="py-1">
-                            <li class="px-4 py-2 text-gray-800 cursor-pointer model-option dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600"
                                 data-value="deepseek_r1">
-                                Deepseek_R1
+                                Deepseek R1
                             </li>
                         </ul>
                         <ul class="py-1">
                             <li class="px-4 py-2 text-gray-800 cursor-pointer model-option dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600"
-                                data-value="gemma3">
-                                Gemma3
+                                data-value="gpt_oss">
+                                OpenAI Gpt-oss
                             </li>
                         </ul>
                     </div>
@@ -456,7 +444,7 @@
             );
 
             // Default model
-            let selectedModel = "gemma2";
+            let selectedModel = "llama3_1";
 
             // Toggle dropdown
             modelDropdownButton.addEventListener("click", () => {
@@ -732,7 +720,7 @@
                     const subText = button.querySelector(
                         ".text-gray-500, .text-gray-400"
                     ).textContent;
-                    const fullText = `${mainText} ${subText}`;
+                    const fullText = `${mainText.trim()} ${subText.trim()}`;
 
                     // Set the input value
                     userInput.value = fullText;
